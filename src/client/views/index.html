@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Website sentiment analyser</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="header">Sentiment analysis</div>
+    </header>
+
+    <main>
+      <section>
+        <form id="process_form">
+          <input id="url" type="text" name="input" value="" placeholder="URL" />
+          <input type="submit" value="PROCESS" />
+        </form>
+      </section>
+
+      <section>
+        <div id="results">
+          <div id="r1" class="column-name">Form Results:</div><div id="form_results"></div>
+          <div id="r2" class="column-name">Agreement:</div><div id="agreement"></div>
+          <div id="r3" class="column-name">Confidence:</div><div id="confidence"></div>
+          <div id="r4" class="column-name">Subjectivity:</div><div id="subjectivity"></div>
+          <div id="r5" class="column-name">Irony:</div><div id="irony"></div>
+          <div id="r6" class="column-name">Score:</div><div id="score"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy by Lana 2023</p>
+    </footer>
+    <script>
+      if ("serviceWorker" in navigator) {
+          window.addEventListener("load", () => {
+              navigator.serviceWorker.register("/service-worker.js");
+          });
+      }
+    </script>
+  </body>
+</html>

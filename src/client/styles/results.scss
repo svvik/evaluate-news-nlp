@@ -1,0 +1,19 @@
+#results {
+    display: grid;
+    grid-template-areas: 
+            "r1 form_results"
+            "r2 agreement"
+            "r3 confidence"
+            "r4 subjectivity"
+            "r5 irony"
+            "r6 score";
+
+    grid-template-columns: 1fr 5fr;
+
+    grid-gap: 10% 5%;
+            
+    .column-name {
+        font-weight: bold;
+    }
+}
+
